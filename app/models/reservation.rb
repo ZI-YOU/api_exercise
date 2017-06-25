@@ -7,4 +7,6 @@ class Reservation < ApplicationRecord
   def generate_booking_code
     self.booking_code = SecureRandom.uuid
   end
+
+  belongs_to :user, :optional => true
 end
